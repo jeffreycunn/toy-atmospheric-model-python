@@ -1,0 +1,2 @@
+# toy-atmospheric-model-python
+A 'simple' toy atmospheric model based on Robert Fovell's work. Originally written in Fortran, then refactored into Matlab (circa 2010).  This present effort/project will takes the Matlab version and refactors into the Python Language.  Contributions are made by volunteers interested in using this model. One project objective is to make this model cloud native (i.e. serverless) and optimized for cloud compute.
