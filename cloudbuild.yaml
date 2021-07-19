@@ -1,0 +1,17 @@
+steps:
+# Docker Build
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t',
+           'us-central1-docker.pkg.dev/$PROJECT_ID/cmm/cmm-python:$SHORT_SHA', '.']
+
+# Docker push to Google Artifact Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push',  'us-central1-docker.pkg.dev/$PROJECT_ID/cmm/cmm-python:$SHORT_SHA']
+
+## Deploy Image to Cloud Run
+#  - name: google/cloud-sdk
+#    args: ['gcloud', 'run', 'deploy', 'cmm-python',
+#           '--image=us-central1-docker.pkg.dev/$PROJECT_ID/cmm/cmm-python:$SHORT_SHA',
+#           '--region', 'us-central1', '--platform', 'managed',
+#           '--allow-unauthenticated', '--memory', '8Gi', '--cpu', '4']
+

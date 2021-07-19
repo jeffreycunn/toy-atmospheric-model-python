@@ -1,0 +1,8 @@
+numpy
+Flask==2.0.1
+requests==2.25.1
+ptvsd==4.3.2 # Required for debugging.
+google-cloud-logging==2.5.0
+google-cloud-storage
+dask[complete]
+matplotlib
